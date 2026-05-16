@@ -1,6 +1,6 @@
-# Arad MMO
+# AradMMO
 
-Arad MMO is an original RPG/MMO foundation plugin for Paper/Folia servers, focused on delivering a configurable, extensible, and operations-friendly core system.
+AradMMO is an original RPG/MMO foundation plugin for Paper/Folia servers, focused on delivering a configurable, extensible, and operations-friendly core system.
 
 - Version: 0.1.0-SNAPSHOT
 - Java: 25+
@@ -56,7 +56,7 @@ Arad MMO is an original RPG/MMO foundation plugin for Paper/Folia servers, focus
 mvn clean package
 ```
 
-Artifact path: `target/arad-mmo-0.1.0-SNAPSHOT.jar`
+Artifact path: `target/AradMMO-0.1.0-SNAPSHOT.jar`
 
 ### 2. Install
 

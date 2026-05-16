@@ -8,7 +8,7 @@
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Arad MMO</name>
+    <name>AradMMO</name>
     <description>Original Paper and Folia compatible MMO foundation plugin.</description>
 
     <properties>
@@ -59,6 +59,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>AradMMO-${project.version}</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
