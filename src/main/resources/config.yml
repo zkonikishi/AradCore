@@ -1,0 +1,40 @@
+equipment-grade:
+  enabled: true
+  # Only MMOItems are processed. Items keep their immutable base values in PDC.
+  require-mmoitems-tags: true
+  min-percent: 1
+  max-percent: 100
+  distribution:
+    # Weighted DNF-like ranges. Adjust without recompiling.
+    - { min: 1,  max: 19,  weight: 8 }
+    - { min: 20, max: 39,  weight: 17 }
+    - { min: 40, max: 59,  weight: 35 }
+    - { min: 60, max: 79,  weight: 25 }
+    - { min: 80, max: 94,  weight: 12 }
+    - { min: 95, max: 100, weight: 3 }
+  # MythicLib/MMOItems NBT numeric tag paths. Add custom stats here.
+  scaled-tags:
+    - MMOITEMS_ATTACK_DAMAGE
+    - MMOITEMS_PHYSICAL_DAMAGE
+    - MMOITEMS_MAGIC_DAMAGE
+    - MMOITEMS_DEFENSE
+    - MMOITEMS_ARMOR
+    - MMOITEMS_MAX_HEALTH
+    - MMOITEMS_MAX_MANA
+  identity-tags:
+    - MMOITEMS_ITEM_ID
+    - MMOITEMS_ITEM_TYPE
+  lore:
+    enabled: true
+    line: '<gray>装备品级: <color><percent>%</color></gray>'
+    marker: aradcore-grade
+    colors:
+      low: '#9E9E9E'
+      medium: '#55FF55'
+      high: '#55FFFF'
+      excellent: '#FF55FF'
+      perfect: '#FFAA00'
+  scan:
+    on-join: true
+    on-inventory-events: true
+    delay-ticks: 2

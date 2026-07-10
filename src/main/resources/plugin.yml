@@ -1,0 +1,15 @@
+name: AradCore
+version: '${version}'
+main: cn.owonya.aradcore.AradCorePlugin
+api-version: '1.21'
+authors: [OwOnya]
+description: DNF-style modular RPG core for the Arad server.
+softdepend: [MMOItems, MythicLib, PlaceholderAPI, CoreTools]
+commands:
+  aradcore:
+    description: AradCore administration command
+    usage: /aradcore <inspect|roll|set|reload>
+    aliases: [arad]
+permissions:
+  aradcore.admin:
+    default: op
