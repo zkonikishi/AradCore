@@ -4,12 +4,35 @@ main: cn.owonya.aradcore.AradCorePlugin
 api-version: '1.21'
 authors: [OwOnya]
 description: DNF-style modular RPG core for the Arad server.
-softdepend: [MMOItems, MythicLib, PlaceholderAPI, CoreTools]
+depend: [MMOItems, MythicLib]
+softdepend: [PlaceholderAPI, CoreTools]
 commands:
   aradcore:
-    description: AradCore administration command
-    usage: /aradcore <inspect|roll|set|reload>
+    description: AradCore 管理命令
+    usage: /aradcore <inspect|roll|set|migrate|reload>
     aliases: [arad]
 permissions:
   aradcore.admin:
+    description: 允许使用全部 AradCore 管理命令
+    default: op
+    children:
+      aradcore.inspect: true
+      aradcore.grade.roll: true
+      aradcore.grade.set: true
+      aradcore.migrate: true
+      aradcore.reload: true
+  aradcore.inspect:
+    description: 查看手持物品的品级与 MMOItems 数据
+    default: op
+  aradcore.grade.roll:
+    description: 重新随机手持 MMOItems 装备的品级
+    default: op
+  aradcore.grade.set:
+    description: 设置手持 MMOItems 装备的品级
+    default: op
+  aradcore.migrate:
+    description: 迁移手持 MMOItems 装备的 AradCore 品级 schema
+    default: op
+  aradcore.reload:
+    description: 重载 AradCore 配置
     default: op
